@@ -100,7 +100,7 @@ func (s *Spider) Test(ctx pkg.Context, _ string) (err error) {
 	return
 }
 
-// TestIndex go run cmd/baiduBaikeSpider/*.go -c dev.yml -n baidu-baike -m prod -f TestIndex
+// TestIndex go run cmd/baiduBaikeSpider/*.go -c dev.yml -n baidu-baike -f TestIndex -m prod
 func (s *Spider) TestIndex(ctx pkg.Context, _ string) (err error) {
 	err = s.YieldRequest(ctx, request.NewRequest().
 		SetUrl("https://baike.baidu.com/").
